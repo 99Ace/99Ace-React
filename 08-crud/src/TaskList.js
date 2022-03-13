@@ -174,10 +174,8 @@ export default class TaskList extends React.Component {
                         this.state.taskBeingEdited !== item.id  ?
                             this.displayTask( item ) :
                             this.displayEditTask ( item )
-                        
                     ))
                 }
-
             </ul>
             <div>
                 <h2>Create new Task</h2>
