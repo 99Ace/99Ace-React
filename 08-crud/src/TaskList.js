@@ -49,7 +49,6 @@ export default class TaskList extends React.Component {
         })
 
     }
-
     checkTask = (taskId) => {
         // go through filter to find the id that match the taskId
         // [0] - cos we only want the first result
@@ -78,7 +77,7 @@ export default class TaskList extends React.Component {
     }
     deleteTask = (taskId) => {
         // find the index of the task
-        let taskIndex = this.state.tasks.findIndex(item => item.id === taskId);
+        let taskIndex = this.state.tasks.findIndex( item => item.id === taskId );
 
         // make a copy and remove the task to be delete
         let modifiedList = [
@@ -101,6 +100,7 @@ export default class TaskList extends React.Component {
                     () => {
                         this.checkTask(item.id)
                     }
+                    
                 } />
                 <button onClick={async () => {
                     this.setState({
@@ -116,7 +116,7 @@ export default class TaskList extends React.Component {
             </li>
         )
     }
-    displayEditTask = (t) => {
+    displayEditTask = (item) => {
         return (
             <li key={ item.id }>
                 <input
